@@ -25,11 +25,6 @@ local-build:
 lint:
 	golangci-lint run --fix
 
-<<<<<<< Updated upstream
-.PHONY: test
-test:
-	go test -v ./...
-=======
 .PHONY: unit-tests
 unit-tests:
 	go test -v ./pkg/...
@@ -51,7 +46,6 @@ e2e-tests: setup-e2e-cluster
 .PHONY: clear-e2e-cluster
 clear-e2e-cluster:
 	kind delete cluster --name gatewayapi-plugin-e2e
->>>>>>> Stashed changes
 
 # convenience target to run `mkdocs serve` using a docker container
 .PHONY: serve-docs
